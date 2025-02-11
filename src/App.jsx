@@ -4,6 +4,7 @@ import CoreConcept from './components/CoreConcept';
 import TabButton from './components/TabButton';
 
 function App() {
+  const handleClick = () => {}
   return (
     <div>
       <Header />
@@ -17,7 +18,7 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
+            {['Components', 'JSX', 'Props', 'State'].map(label => <TabButton onClick={handleClick}>{label}</TabButton>)}
           </menu>
         </section>
       </main>
