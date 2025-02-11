@@ -1,6 +1,7 @@
 import {CORE_CONCEPTS} from './data'
 import Header from './components/Header/Header';
 import CoreConcept from './components/CoreConcept';
+import TabButton from './components/TabButton';
 
 function App() {
   return (
@@ -13,7 +14,12 @@ function App() {
             {CORE_CONCEPTS.map(props => (<CoreConcept {...props}/>))}
           </ul>
         </section>
-        <h2>Time to get started!</h2>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+          </menu>
+        </section>
       </main>
     </div>
   );
