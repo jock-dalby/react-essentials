@@ -10,7 +10,7 @@ function App() {
   const [selectedTopic, setSelectedTopic] = useState('components');
 
   const handleClick = (tabLabel) => {
-    setSelectedTopic(tabLabel.toLowerCase());
+    setSelectedTopic(tabLabel);
   }
 
   return (
@@ -26,7 +26,7 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            {Object.values(EXAMPLES).map(({title}) => <TabButton key={title} onClick={() => handleClick(title)}>{title}</TabButton>)}
+            {Object.keys(EXAMPLES).map((title) => <TabButton key={title} isActive={selectedTopic === title} onClick={() => handleClick(title)}>{EXAMPLES[title].title}</TabButton>)}
           </menu>
           <div id="tab-content">
             <h3>{EXAMPLES[selectedTopic].title}</h3>
