@@ -1,4 +1,4 @@
-function CoreConcept({title, description, image}) {
+const CoreConcept = ({title, description, image}) => {
     return (
       <li>
         <img src={image} alt={title} />
