@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Section from "./Section";
 import TabButton from "./TabButton";
 import { EXAMPLES } from "../data";
 
@@ -10,8 +11,7 @@ const Examples = () => {
     }
         
     return (
-        <section id="examples">
-          <h2>Examples</h2>
+        <Section id="examples" title="Examples">
           <menu>
             {Object.keys(EXAMPLES).map((title) => <TabButton key={title} isActive={selectedTopic === title} onClick={() => handleClick(title)}>{EXAMPLES[title].title}</TabButton>)}
           </menu>
@@ -22,7 +22,7 @@ const Examples = () => {
               <code>{EXAMPLES[selectedTopic].code}</code>
             </pre>
           </div>
-        </section>
+        </Section>
     )   
 }
 
