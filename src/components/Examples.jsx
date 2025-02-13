@@ -15,7 +15,7 @@ const Examples = () => {
         
     return (
         <Section id="examples" title="Examples">
-          <Tabs buttons={buttons}>
+          <Tabs buttons={buttons} ButtonContainerElem="menu">
             <div id="tab-content">
                 <h3>{EXAMPLES[selectedTopic].title}</h3>
                 <p>{EXAMPLES[selectedTopic].description}</p>
